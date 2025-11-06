@@ -25,7 +25,7 @@ function Portofolio() {
     : filteredProjects.slice(0, 6);
 
   return (
-    <div className='flex flex-col justify-center m-10 items-center space-y-10 mb-20'>
+    <div className='flex flex-col justify-center items-center space-y-10 my-20'>
       <div className='flex flex-col items-center'>
         <h1 className='text-4xl'>My <span className='text-base'>Portofolio</span></h1>
         <p>A showcase of my recent work and creative projects</p>
@@ -58,7 +58,7 @@ function Portofolio() {
         ))}
       </div>
 
-        <div className="grid sm:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-3 gap-5">
         {displayedProjects.map((item) => (
           <Card
             key={item.id}

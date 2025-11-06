@@ -10,7 +10,7 @@ function Hero() {
     <div className='flex flex-col h-screen justify-center items-center bg-linear-to-b from-blue-100 to-white '>
         <h1 className='font-black text-5xl m-10 text-center'><span className='text-base'>TFBAGAS</span> Video Editor</h1>
         <p className='flex text-center text-xl mx-7 mb-10 '>profesional video editing that brings your vision to life. specializing in AMV, Jedag-jedug, Steram overlays, and stunning 3d Motion Graphics.</p>
-        <Link href="">
+        <Link href="#contact">
             <button className='bg-base text-white flex p-2 px-3 space-x-3 items-center rounded-md shadow-xl cursor-pointer'>
                 <CiPlay1 />
                 <p>Watch portofolio</p>

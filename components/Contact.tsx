@@ -33,17 +33,17 @@ function Contact() {
     }
   };
   return (
-    <div className="flex flex-wrap justify-center gap-3 m-20 items-center text-2xl">
-        <a href="">
+    <div className="flex bg-blue-100 flex-wrap justify-center gap-3 py-10 items-center text-2xl">
+        <a href="http://wa.me/6289630860427">
         <div className="bg-base text-white rounded-full p-3 shadow-xl "><FaWhatsapp /></div>
         </a>
-        <a href="">
+        <a href="https://www.instagram.com/tfbagas.vz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
         <div className="bg-base text-white rounded-full p-3 shadow-xl "><FaInstagram /></div>
         </a>
-        <a href="">
+        <a href="https://www.tiktok.com/@tfbagas?is_from_webapp=1&sender_device=pc">
         <div className="bg-base text-white rounded-full p-3 shadow-xl "><FaTiktok /></div>
         </a>
-        <div className="ml-4">
+        <div className="m-4">
             <button
                 onClick={copyToClipboard}
                 className="px-3 py-1 rounded-full text-2xl bg-indigo-600 text-white flex gap-2 hover:bg-indigo-700 items-center shadow-xl"
@@ -55,7 +55,7 @@ function Contact() {
         </div>
             <div
             aria-hidden={!copied}
-            className={`text-sm ${copied ? "opacity-100" : "opacity-0"} transition-opacity`}
+            className={` absolute bottom-2 text-sm ${copied ? "opacity-100" : "opacity-0"} transition-opacity`}
         >
             {copied ? "Copied: " + discordUsername : ""}
         </div>

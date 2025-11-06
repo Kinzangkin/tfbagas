@@ -11,19 +11,19 @@ export default function Home() {
       <div>
         <Navbar />
       </div>
-      <div>
+      <div id="home">
         <Hero />
       </div>
-      <div>
+      <div id="about">
         <Aboutme />
       </div>
-      <div>
+      <div id="service">
         <Service />
       </div>
-      <div>
+      <div id="porto">
         <Portofolio />
       </div>
-      <div>
+      <div id="contact">
         <Contact />
       </div>
     </div>

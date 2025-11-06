@@ -18,16 +18,16 @@ export default function Navbar() {
 
           {/* Menu desktop */}
           <div className="hidden md:flex space-x-6">
-            <Link href="/" className="text-gray-800 hover:text-base">
+            <Link href="#home" className="text-gray-800 hover:text-base">
               Home
             </Link>
-            <Link href="/about" className="text-gray-800 hover:text-base">
+            <Link href="#about" className="text-gray-800 hover:text-base">
               About
             </Link>
-            <Link href="/services" className="text-gray-800 hover:text-base">
+            <Link href="#service" className="text-gray-800 hover:text-base">
               Services
             </Link>
-            <Link href="/contact" className="text-gray-800 hover:text-base">
+            <Link href="#contact" className="text-gray-800 hover:text-base">
               Contact
             </Link>
           </div>
@@ -53,28 +53,28 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="flex flex-col space-y-2 px-4 py-3 ">
             <Link
-              href="/"
+              href="home"
               className="text-gray-800 hover:text-base"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
-              href="/about"
+              href="#about"
               className="text-gray-800 hover:text-base"
               onClick={() => setIsOpen(false)}
             >
               About
             </Link>
             <Link
-              href="/services"
+              href="#service"
               className="text-gray-800 hover:text-base"
               onClick={() => setIsOpen(false)}
             >
               Services
             </Link>
             <Link
-              href="/contact"
+              href="#contact"
               className="text-gray-800 hover:text-base"
               onClick={() => setIsOpen(false)}
             >

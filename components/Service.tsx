@@ -10,7 +10,7 @@ function Service() {
         <h1 className='text-4xl'>My <span className='text-base'>Services</span></h1>
         <p className='text-center'>Specialized editing services tailored to make your content stand out</p>
 
-        <div className='space-y-5'>
+        <div className='space-y-5 sm:flex sm:space-x-10 sm:space-y-0'>
             <div className='bg-white flex flex-col p-7 space-y-7 rounded-2xl shadow-xl shadow-base/20'>
                 <CiPlay1 className='text-base text-3xl' />
                 <h1 className='text-xl'>Amv Editing</h1>
