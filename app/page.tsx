@@ -20,7 +20,7 @@ export default function Home() {
       <div id="service">
         <Service />
       </div>
-      <div id="porto">
+      <div id="">
         <Portofolio />
       </div>
       <div id="contact">

@@ -34,7 +34,14 @@ function Contact() {
     }
   };
   return (
-    <div className="flex bg-blue-100 flex-wrap justify-center gap-3 py-10 items-center text-2xl">
+    <div className="bg-blue-100 items-center flex flex-col p-20 pt-40 justify-center" >
+      <div>
+        <div className='flex flex-col items-center'>
+        <h1 className='text-4xl'>Contact<span className='text-base'> us</span></h1>
+        <p>A showcase of my recent work and creative projects</p>
+      </div>
+      </div>
+      <div className="flex flex-wrap justify-center gap-3 py-10 sm:w-60 items-center text-2xl">
         <a href="http://wa.me/6289630860427">
         <div className="bg-base text-white rounded-full p-3 shadow-xl "><FaWhatsapp /></div>
         </a>
@@ -63,6 +70,7 @@ function Contact() {
         >
             {copied ? "Copied: " + discordUsername : ""}
         </div>
+    </div>
     </div>
   )
 }
