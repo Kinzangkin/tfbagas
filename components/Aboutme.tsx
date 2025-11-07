@@ -14,7 +14,7 @@ function Aboutme() {
               {/* Left side - Image */}
                 <div className="aspect-square relative rounded-lg overflow-hidden border ">
                   <Image
-                    src="/image/foto1.jpg"
+                    src="/image/foto3.jpg"
                     alt="Video editing workspace"
                     fill
                     className="w-full h-full object-cover"

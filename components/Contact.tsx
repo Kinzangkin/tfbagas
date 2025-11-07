@@ -5,9 +5,10 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { BsDiscord } from "react-icons/bs";
 import React, { useState } from "react";
+import { FaYoutube } from "react-icons/fa";
 
 function Contact() {
-  const discordUsername = "YourName#1234"; // ganti dengan username Discord-mu
+  const discordUsername = "tfbagas#2016"; // ganti dengan username Discord-mu
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = async () => {
@@ -42,6 +43,9 @@ function Contact() {
         </a>
         <a href="https://www.tiktok.com/@tfbagas?is_from_webapp=1&sender_device=pc">
         <div className="bg-base text-white rounded-full p-3 shadow-xl "><FaTiktok /></div>
+        </a>
+        <a href="https://www.youtube.com/@tfbagas">
+        <div className="bg-base text-white rounded-full p-3 shadow-xl "><FaYoutube /></div>
         </a>
         <div className="m-4">
             <button
