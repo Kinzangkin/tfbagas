@@ -56,7 +56,7 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="flex flex-col space-y-2 px-4 py-3 ">
             <Link
-              href="home"
+              href="/"
               className="text-gray-800 hover:text-base"
               onClick={() => setIsOpen(false)}
             >
