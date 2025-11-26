@@ -6,7 +6,7 @@ import { FaBolt, FaLayerGroup } from "react-icons/fa";
 
 function Hero() {
   return (
-    <section className="w-full bg-linear-to-b from-blue-50 to-white py-20">
+    <section className="w-full bg-linear-to-b from-blue-50 to-white md:py-20 py-10">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center mt-20 sm:mt-40 justify-between px-6 md:px-10 gap-10">
 
         {/* LEFT CONTENT */}
