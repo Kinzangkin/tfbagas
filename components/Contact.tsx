@@ -27,12 +27,8 @@ function Contact() {
         document.execCommand("copy");
         document.body.removeChild(textarea);
       }
-
-      // Notifikasi kecil di bawah
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-
-      // 🔥 ALERT tampil di sini
       alert("Discord username copied: " + discordUsername);
 
     } catch (err) {
