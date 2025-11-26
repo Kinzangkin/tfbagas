@@ -63,7 +63,7 @@ function Hero() {
         {/* RIGHT IMAGE */}
         <div className="relative md:w-1/2 flex justify-center">
           <Image
-            src="/image/foto3.jpg"
+            src="/image/logo.jpg"
             alt="editing software"
             width={500}
             height={350}
