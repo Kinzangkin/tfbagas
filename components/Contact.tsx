@@ -31,8 +31,7 @@ function Contact() {
       setTimeout(() => setCopied(false), 2000);
       alert("Discord username copied: " + discordUsername);
 
-    } catch (err) {
-      alert("Gagal menyalin username Discord.");
+    } finally {
     }
   };
 
