@@ -27,7 +27,7 @@ function Aboutme() {
               
                 <div className='space-y-10'>
                     <p className="text-gray-700 text-lg leading-relaxed">
-                  Passionate video editor with 5+ years of experience creating content that captivates and resonates. 
+                  Hi, my name is Bagaskoro Wisnu I'm Passionate video editor with 5+ years of experience creating content that captivates and resonates. 
                   My journey began with anime music videos and has evolved into a full spectrum of motion design.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
