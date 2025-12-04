@@ -4,6 +4,7 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { createClient } from "@/lib/supabase-client"
 import { FiTrash2, FiPlus } from "react-icons/fi"
+import { useCallback } from "react"
 
 const AVAILABLE_TAGS = ["amv", "jedag jedug", "3d", "overlay"]
 
@@ -24,25 +25,29 @@ export default function Page() {
     const [isLoadingData, setIsLoadingData] = useState(true)
     const supabase = createClient()
 
+    const loadMedia = useCallback(async () => {
+    setIsLoadingData(true)
+    try {
+        const { data, error } = await supabase
+            .from("tfbagasMedia")
+            .select("*")
+            .order("created_at", { ascending: false })
+
+        if (error) throw error
+        setMediaList(data || [])
+    } catch (error) {
+        console.error("Error loading media:", error)
+    } finally {
+        setIsLoadingData(false)
+    }
+}, [supabase])
+
     useEffect(() => {
         console.log("[v0] Supabase URL being used:", process.env.NEXT_PUBLIC_SUPABASE_URL)
         console.log("[v0] Supabase Anon Key:", process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? "SET" : "NOT SET")
+
         loadMedia()
     }, [])
-
-    const loadMedia = async () => {
-        setIsLoadingData(true)
-        try {
-            const { data, error } = await supabase.from("tfbagasMedia").select("*").order("created_at", { ascending: false })
-
-            if (error) throw error
-            setMediaList(data || [])
-        } catch (error) {
-            console.error("Error loading media:", error)
-        } finally {
-            setIsLoadingData(false)
-        }
-    }
 
     const handleAddMedia = async (e: React.FormEvent) => {
         e.preventDefault()
@@ -221,7 +226,7 @@ export default function Page() {
                                         </div>
                                         <button
                                             onClick={() => handleDeleteMedia(item.id)}
-                                            className="p-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition duration-200 flex-shrink-0"
+                                            className="p-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition duration-200 shrink-0"
                                         >
                                             <FiTrash2 className="w-4 h-4" />
                                         </button>
