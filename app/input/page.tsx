@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
-import { createClient } from "@/lib/supabase-client"
+import { supabase } from "@/lib/supabase-client"
 import { FiTrash2, FiPlus } from "react-icons/fi"
 import { useCallback } from "react"
 
@@ -23,31 +23,30 @@ export default function Page() {
     const [selectedTags, setSelectedTags] = useState<string[]>([])
     const [loading, setLoading] = useState(false)
     const [isLoadingData, setIsLoadingData] = useState(true)
-    const supabase = createClient()
 
     const loadMedia = useCallback(async () => {
-    setIsLoadingData(true)
-    try {
-        const { data, error } = await supabase
-            .from("tfbagasMedia")
-            .select("*")
-            .order("created_at", { ascending: false })
+        setIsLoadingData(true)
+        try {
+            const { data, error } = await supabase
+                .from("tfbagasMedia")
+                .select("*")
+                .order("created_at", { ascending: false })
 
-        if (error) throw error
-        setMediaList(data || [])
-    } catch (error) {
-        console.error("Error loading media:", error)
-    } finally {
-        setIsLoadingData(false)
-    }
-}, [supabase])
+            if (error) throw error
+            setMediaList(data || [])
+        } catch (error) {
+            console.error("Error loading media:", error)
+        } finally {
+            setIsLoadingData(false)
+        }
+    }, [supabase])
 
     useEffect(() => {
         console.log("[v0] Supabase URL being used:", process.env.NEXT_PUBLIC_SUPABASE_URL)
         console.log("[v0] Supabase Anon Key:", process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? "SET" : "NOT SET")
 
         loadMedia()
-    }, [])
+    }, [loadMedia])
 
     const handleAddMedia = async (e: React.FormEvent) => {
         e.preventDefault()
