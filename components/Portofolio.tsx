@@ -25,8 +25,7 @@ function Portofolio() {
     { id: "Overlay", label: "Overlay"},
     { id: "3d", label: "3d"},
   ]
-  
-  // Ambil data dari Supabase
+
   useEffect(() => {
     const supabase = createClient()
     const load = async () => {
